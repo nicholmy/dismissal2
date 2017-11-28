@@ -13,9 +13,10 @@
 </head>
 <body>
 	<div id="main">
-		<a href="http://www.mylesnicholson.com/dismissal2/index.php">
-			<img src="http://www.mylesnicholson.com/dismissal2/img/primaryLogo.png" alt="Primary School Logo" width="20%" height="20%">
-		</a>
+		<!-- <a href="http://www.mylesnicholson.com/dismissal2/index.php">
+			Bus Dismissal System
+		</a> -->
+		<h1>Bus Dismissal System</h1>
 		<nav>
 			<ul class="menu">
 				<li>

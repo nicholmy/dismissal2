@@ -117,9 +117,9 @@
 						{
 							//Store each column into a variable here
 							$firstName = $filesop[0];
-							$firstName = mysqli_real_escape_string($firstName);
+							$firstName = mysqli_real_escape_string($conn, $firstName);
 							$lastName = $filesop[1];
-							$lastName = mysqli_real_escape_string($lastName);
+							$lastName = mysqli_real_escape_string($conn, $lastName);
 							$pride = $filesop[2];
 
 							//print_r($firstName . " " . $lastName . " " . $pride . "<br />");
@@ -209,14 +209,14 @@
 						{
 							//Store each column into a variable here
 							$firstName = $filesop[0];
-							$firstName = mysqli_real_escape_string($firstName);
+							$firstName = mysqli_real_escape_string($conn, $firstName);
 							$lastName = $filesop[1];
-							$lastName = mysqli_real_escape_string($lastName);
+							$lastName = mysqli_real_escape_string($conn, $lastName);
 							$pride = $filesop[2];
 							$teacherFirst = $filesop[3];
-							$teacherFirst = mysqli_real_escape_string($teacherFirst);
+							$teacherFirst = mysqli_real_escape_string($conn, $teacherFirst);
 							$teacherLast = $filesop[4];
-							$teacherLast = mysqli_real_escape_string($teacherLast);
+							$teacherLast = mysqli_real_escape_string($conn, $teacherLast);
 							$busID = $filesop[5];
 							$teacherID = 0;
 
@@ -238,7 +238,7 @@
 								echo("Database updated successfully! Added $firstName $lastName ($pride) to the database. <br />");
 							}
 							//Apparently this is depreciated? Well then... >_> I do wish I was using mysqli tho
-							$id = mysqli_insert_id();
+							$id = mysqli_insert_id($conn);
 							$dayID = 2;
 							while ($dayID <= 6) {
 								$query = "INSERT INTO Assignment(dayID, studentID, busID, notes) VALUES('$dayID', '$id', '$busID', '')";

@@ -11,8 +11,8 @@
 			
 				$query = "INSERT INTO Override(date, studentID, busID, notes) VALUES('$_POST[date]', '$_POST[studentID]', '$_POST[busID]', '$_POST[notes]')";
 					
-				if (!mysql_query($query, $conn)) {
-					echo ("Error: ".mysql_error ());
+				if (!mysqli_query($conn, $query)) {
+					echo ("Error: ".mysqli_error ($conn));
 				} else {
 					echo("Database updated successfully!<br />");
 				}
