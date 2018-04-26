@@ -1,4 +1,9 @@
-/* Credit to https://dev7studios.com/dropit/ and https://app.cssmenumaker.com/ */
+footer {
+	color: #9d9d9d;
+	margin-top: 20px;
+}
+
+/* Credit to https://dev7studios.com/dropit/ and https://app.cssmenumaker.com/ 
 ul.menu  { 
 	list-style: none;
 	list-style-type: none;
@@ -40,7 +45,7 @@ ul.menu li {
 ul.menu li a {
     display: block;
     /*padding: 8px;
-    background-color: #dddddd;*/
+    background-color: #dddddd;
 	
 	padding: 17px;
     font-size: 12px;
@@ -49,4 +54,4 @@ ul.menu li a {
     color: #dddddd;
     font-weight: 700;
     text-transform: uppercase;
-}
+} */

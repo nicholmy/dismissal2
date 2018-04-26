@@ -1,6 +1,8 @@
 $(document).ready(function(){
-	$("#date").datepicker({ dateFormat: "yy-mm-dd" });
-	
+	//$("#date").datepicker({ dateFormat: "yy-mm-dd" });
+	$('#date').multiDatesPicker({
+		dateFormat : "yy-mm-dd"
+	});
 	currentStudent = $("#studentID").val();
 	
 	$("#studentID").change(function() {

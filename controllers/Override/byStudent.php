@@ -29,7 +29,8 @@
 						FROM Override
 						JOIN Bus ON Override.busID = Bus.busID
 						WHERE Override.studentID = '$_GET[studentID]'
-						ORDER BY Override.date";
+						ORDER BY Override.date
+						LIMIT 7";
 			
 			$result = mysqli_query($conn, $query) or die("Error: ".mysqli_error ());
 			

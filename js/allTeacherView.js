@@ -3,29 +3,33 @@ $(document).ready(function(){
 	//currentDay = $("#dayID").val()
 	
 	//updateVals();
-	grabTable();
+	//grabTable();
 	//grabOverride();
 	
-	/*$("#dayID").change(function() {
-		updateVals();
-		grabTable();
-	});*/
+	
+	
+	$("#date").datepicker({ dateFormat: "yy-mm-dd" });
+	$("#date").change(function() {
+		grabTable($(this).val());
+	});
 });
 
-$( document ).ajaxStart(function() {
+/*$( document ).ajaxStart(function() {
   $("#table").html("Loading...")
-});
+}); */
 
 /*function updateVals() {
 	//currentTeacher = $("#teacherID").val()
 	currentDay = $("#dayID").val()
 }*/
 
-function grabTable() {
+function grabTable(getdate) {
+	$("#table").html("Loading...")
 	$.ajax({
 		url : "../controllers/Assignment/withOverridesAllTeachers.php",
 		data : {
-			teacherID : 0
+			teacherID : 0,
+			date : getdate 
 		},
 		success : function(response) {
 			$("#table").html(response)

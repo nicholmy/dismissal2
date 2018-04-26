@@ -1,6 +1,13 @@
 body {
 	background-color:#1BA5E0;
+	margin-top: 50px;
 	/*margin: 0 75px;*/
+}
+
+#main {
+	background-color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 div.page { page-break-after: always }
@@ -8,7 +15,7 @@ div.page { page-break-after: always }
 .highlight {
 	background-color: yellow;
 }
-
+/*
 #main {
 	width: 960px;
 	margin: 0 auto;
@@ -20,7 +27,7 @@ div.page { page-break-after: always }
 #footer {
 	margin-top: 5px;
 }
-
+*/
 table
 {
 border-collapse:collapse;
@@ -111,3 +118,4 @@ table tr:last-child td:last-child {
     border-radius: 0 0 6px 0;
 }
 
+*/

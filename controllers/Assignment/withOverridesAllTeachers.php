@@ -1,9 +1,10 @@
 <?php include("../../templates/db_connect.php"); ?>
 
 <?php
-		
+	if ($_GET["date"]) {	
 		date_default_timezone_set('EST');
-		$date = date('Y/m/d');
+		#$date = date('Y/m/d');
+		$date = $_GET["date"];
 		
 		#TODO: Check if this is a valid date
 		#if ($_GET["date"]) {
@@ -35,8 +36,8 @@
 					<tbody>");
 			$id = $trow["teacherID"];
 			#Grab all the Overrides for the students under this teacher, on this day
-			#Combine it with the table with all of the regular Assigments for this weekday
-			#Don't include Assignments that have an Override
+			#Combine it with the table with all of the regular Assignments for this weekday
+			#Don't include students who have both an Assignment and an Override (so they aren't listed twice)
 			$query2 = "(SELECT Student.firstName AS firstName, Student.lastName AS lastName, Bus.driverName, Bus.name, Bus.busID, Bus.lineOrder AS lnOrder, Override.notes, 'Y' AS isOverride
 							FROM Override
 							JOIN Student ON Override.studentID = Student.id
@@ -83,5 +84,5 @@
 			echo("	</tbody>
 				</table></div>");
 		} 
-
+	}
 ?>

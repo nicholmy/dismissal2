@@ -2,7 +2,7 @@
 
 <?php
 
-	$query = "SELECT * FROM Bus ORDER BY lineOrder";
+	$query = "SELECT * FROM Bus ORDER BY name";
 	
 	$rs = mysqli_query($conn, $query);
 	
@@ -10,7 +10,7 @@
 	while($row = mysqli_fetch_array($rs)) {
 		echo("<option value='" . $row["busID"] . "'>");
 		if ($row["busID"] != -1 && $row["busID"] != -2) {
-			echo($row["busID"] . " - " . $row["name"] . " - " . $row["driverName"]);
+			echo($row["name"] . " - " . $row["busID"] . " - " . $row["driverName"]);
 		} else {
 			echo($row["name"]);
 		}
