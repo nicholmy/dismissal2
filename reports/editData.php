@@ -2,16 +2,23 @@
 <html>
 <head>
 	<title>Edit Data Page</title>
-	<link rel="stylesheet" href="../css/tabs.css" />
+	<!-- <link rel="stylesheet" href="../css/tabs.css" /> -->
 	<script type="text/javascript" src="../js/editData.js"></script>
 </head>
 <body>
-	<ul id="tabs">
-		<li><a href="#teacherContainer">Teachers</a></li>
-		<li><a href="#busContainer">Buses</a></li>
-		<li><a href="#studentContainer">Students</a></li>
+	<ul class="nav nav-tabs" id="myTab" role="tablist">
+	  <li class="nav-item active">
+		<a class="nav-link active" id="teacher-tab" data-toggle="tab" href="#teacherContainer" role="tab" aria-controls="home" aria-selected="true">Teachers</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" id="bus-tab" data-toggle="tab" href="#busContainer" role="tab" aria-controls="profile" aria-selected="false">Buses</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" id="student-tab" data-toggle="tab" href="#studentContainer" role="tab" aria-controls="contact" aria-selected="false">Students</a>
+	  </li>
 	</ul>
-	<div class="container" id="teacherContainer">
+	<div class="tab-content" id="myTabContent">
+	  <div class="tab-pane fade active in" id="teacherContainer" role="tabpanel" aria-labelledby="teacher-tab">
 		<h2>Teacher Portal</h2>
 		<p>
 			If you want to add a teacher, make sure the drop down box is EMPTY, fill in their information, then click the "Add" button.
@@ -54,8 +61,8 @@
 		<div id="teacherStatus"></div>
 		<h2>Teacher Table</h2>
 		<div id="ttable"></div>
-	</div>
-	<div class="container" id="busContainer">
+	  </div>
+	  <div class="tab-pane fade" id="busContainer" role="tabpanel" aria-labelledby="bus-tab">
 		<h2>Bus Portal</h2>
 		<p>
 			If you want to add a bus, make sure the drop down box is EMPTY, fill in its information, then click the "Add" button.
@@ -109,8 +116,8 @@
 		<br /><br />
 		<div id="busStatus"></div>
 		<div id="btable"></div>
-	</div>
-	<div class="container" id="studentContainer">
+	  </div>
+	  <div class="tab-pane fade" id="studentContainer" role="tabpanel" aria-labelledby="student-tab">
 		<h2>Student Portal</h2>
 		<p>
 			If you want to add a student, make sure the drop down box is EMPTY, fill in all of their information, then click the "Add" button.
@@ -171,6 +178,7 @@
 		</form>
 		<br />
 		<div id="stable"></div>
+	  </div>
 	</div>
 	<br />
 	

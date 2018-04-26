@@ -11,25 +11,6 @@ $(document).ready(function(){
 	$('#teacherSubmit').prop('disabled', true);
 	$('#deleteTeacher').prop('disabled', true);
 	
-	//For the tabs
-	$('#tabs li a').addClass('inactive');
-    $('.container').hide();
-	$('.container:first').removeClass('inactive');
-	$('.container:first').show();
-	
-	//When you click on a link, make all the others inactive, then activate the one you clicked on
-	$('#tabs li a').click(function(){
-		var t = $(this).attr('href');
-		//Don't want it to do stuff if you click on the already active link
-		if($(this).hasClass('inactive')){
-			$('#tabs li a').addClass('inactive');
-			$(this).removeClass('inactive');
-			$('.container').hide();
-			$(t).fadeIn('slow');
-			return false;
-		}
-	});
-	
 	/*****************STUDENTS***********************/
 	
 	$("#studentID").change(function() {
