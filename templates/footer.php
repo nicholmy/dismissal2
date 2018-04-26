@@ -1,12 +1,7 @@
 
-	<div id="footer">
-		<nav>
-			<ul class="menu">
-				<li><a href="http://www.mylesnicholson.com/dismissal2/index.php">Home</a></li>
-				<li><a href="#main">Back To Top</a></li>
-			</ul>
-		</nav>
 	</div>
-</div>
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="http://www.mylesnicholson.com/dismissal2/js/bootstrap.min.js"></script>
 </body>
 </html>
