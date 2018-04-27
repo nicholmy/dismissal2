@@ -18,7 +18,7 @@
 	  </li>
 	</ul>
 	<div class="tab-content" id="myTabContent">
-	  <div class="tab-pane fade active in" id="teacherContainer" role="tabpanel" aria-labelledby="teacher-tab">
+	  <div class="tab-pane fade active in show" id="teacherContainer" role="tabpanel" aria-labelledby="teacher-tab">
 		<h2>Teacher Portal</h2>
 		<p>
 			If you want to add a teacher, make sure the drop down box is EMPTY, fill in their information, then click the "Add" button.

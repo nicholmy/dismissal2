@@ -3,10 +3,96 @@
 <html>
 <head>
 	<title>Import Data</title>
-	<link rel="stylesheet" href="../css/tabs.css" />
 	<script type="text/javascript" src="../js/importView.js"></script>
-</head>
 <body>
+	<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<li class="nav-item active">
+			<a class="nav-link active" id="teacher-tab" data-toggle="tab" href="#teacherContainer" role="tab" aria-controls="home" aria-selected="true">Teachers</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="bus-tab" data-toggle="tab" href="#busContainer" role="tab" aria-controls="profile" aria-selected="false">Buses</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="student-tab" data-toggle="tab" href="#studentContainer" role="tab" aria-controls="contact" aria-selected="false">Students</a>
+		</li>
+	</ul>
+	<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade active in show" id="teacherContainer" role="tabpanel" aria-labelledby="teacher-tab">
+			<h2>Import Teacher Data</h2>
+			<p>
+				This will allow you to mass upload teachers to the database using an excel/csv file. <br /> 
+				Use three columns, for the first name, last name, and the Pride that teacher is in charge of. <br />
+				Example: Myles | Nicholson | 2009
+			</p>
+			<form enctype="multipart/form-data" method="post" role="form">
+			<div class="form-group">
+				<label for="exampleInputFile">File Upload: </label>
+				<input type="file" name="teacherfile" id="file" size="150">
+				<p class="help-block">Please be sure to only use Excel/CSV Files!</p>
+			</div>
+			<button type="submit" class="btn btn-default" name="Teacher" value="Teacher">Upload Teachers</button>
+			</form>
+			
+			<div id="teacherToggle">
+			<h2>Teachers in the Database:</h2>
+			</div>
+			<div id="teacherTable">
+			</div>
+		</div>
+		<div class="tab-pane fade" id="busContainer" role="tabpanel" aria-labelledby="bus-tab">
+			<h2>Import Bus Data</h2>
+			<p>
+				This will allow you to mass upload bus data to the database using an excel/csv file. <br /> 
+				Use five columns, for the bus ID, name, line order, driver name, and contact info. <br />
+				Remember that car riders have a special ID of -1. <br />
+				Example: 2009 | Blue Triangle | 15 | Mr. Nicholson | 576-8790
+			</p>
+			<form enctype="multipart/form-data" method="post" role="form">
+			<div class="form-group">
+				<label for="exampleInputFile">File Upload: </label>
+				<input type="file" name="busfile" id="file" size="150">
+				<p class="help-block">Please be sure to only use Excel/CSV Files!</p>
+			</div>
+			<button type="submit" class="btn btn-default" name="Bus" value="Bus">Upload Buses</button>
+			</form>
+			
+			<div id="busToggle">
+			<h2>Buses in the Database:</h2>
+			</div>
+			<div id="busTable">
+			</div>
+		</div>
+		<div class="tab-pane fade" id="studentContainer" role="tabpanel" aria-labelledby="student-tab">
+		<h2>Import Student Data</h2>
+		<p>
+			This will allow you to mass upload student data to the database using an excel/csv file. <br /> 
+			Use six columns, for the first name, last name, pride, home teacher first name, home teacher last name, and main bus ID. <br />
+			Example: Myles | Nicholson | 2009 | Tammi | Sutton | -1 <br /> <br />
+			Before uploading, remember: <br />
+			<ul>
+				<li>Car riders have a special bus ID of -1.</li>
+				<li>Students with no bus assigned have a special bus ID of -2.</li>
+				<li>The teachers must be added first before importing the students. </li>
+				<li>The bus IDs in the file must match with the buses already in the database. </li>
+				<li>The uploaded file must be in the .csv format.</li>
+			</ul>
+		</p>
+		<form enctype="multipart/form-data" method="post" role="form">
+			<div class="form-group">
+				<label for="exampleInputFile">File Upload: </label>
+				<input type="file" name="studentfile" id="file" size="150">
+				<p class="help-block">Please be sure to only use Excel/CSV Files!</p>
+			</div>
+			<button type="submit" class="btn btn-default" name="Student" value="Student">Upload Students</button>
+		</form>
+		<div id="studentToggle">
+		<h2>Students in the Database:</h2>
+		</div>
+		<div id="studentTable">
+		</div>
+	</div>
+	</div>
+	<!--
 	<ul id="tabs">
 		<li><a href="#teacherContainer">Teachers</a></li>
 		<li><a href="#busContainer">Buses</a></li>
@@ -88,6 +174,7 @@
 		<div id="studentTable">
 		</div>
 	</div>
+	-->
 	<br />
 	<div id="statusToggle"> <h2>Status:</h2> </div>
 	<div id="Status">
