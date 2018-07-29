@@ -29,10 +29,13 @@
 						FROM Override
 						JOIN Bus ON Override.busID = Bus.busID
 						WHERE Override.studentID = '$_GET[studentID]'
-						ORDER BY Override.date
-						LIMIT 7";
+						ORDER BY Override.date DESC";
 			
-			$result = mysqli_query($conn, $query) or die("Error: ".mysqli_error ());
+			if ($_GET["limitFlag"] == 1) {
+				$query = $query . " LIMIT 7";
+			}
+			
+			$result = mysqli_query($conn, $query) or die("Error: ".mysqli_error());
 			
 			while($row = mysqli_fetch_array($result)) {
 				echo("<tr>" .

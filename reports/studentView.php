@@ -16,6 +16,10 @@
 				</select>
 			</div>
 		</div>
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="seeAll">
+			<label class="form-check-label" for="seeAll">See all overrides</label>
+		</div>
 	</form>
 	<hr>
 	<!-- <form action="studentView.php">
