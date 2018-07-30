@@ -9,6 +9,7 @@
 		<li><a href="reports/studentView.php">Student Report</a></li>
 		<li><a href="reports/dayTeacherView.php">Individual Teacher Report</a></li>
 		<li><a href="reports/allTeacherView.php">Collective Teacher Report</a></li>
+		<li><a href="reports/gradeView.php">Grade Report</a></li>
 		<li><a href="reports/dayBusView.php">Bus Report</a></li>
 		<li><a href="reports/editAssignments.php">Edit Assignments</a></li>
 		<li><a href="reports/addOverride.php">Add an override</a></li>

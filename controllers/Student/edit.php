@@ -9,7 +9,7 @@
 		if ($_POST["studentID"]) {
 			$query = "";
 			if ($_POST["lastName"]) {
-				$lastName = mysqli_real_escape_string($_POST["lastName"]);
+				$lastName = $_POST["lastName"];
 				$query = "UPDATE Student SET lastName = '" . $lastName . "' WHERE id = '" . $_POST['studentID'] . "';";
 			
 				$result = mysqli_query($conn, $query) or die('Error setting the name: '.mysqli_error($conn));
@@ -18,7 +18,8 @@
 			}
 			
 			if ($_POST["firstName"]) {
-				$firstName = mysqli_real_escape_string($_POST["firstName"]);
+				//$firstName = mysqli_real_escape_string($_POST["firstName"]);
+				$firstName = $_POST["firstName"];
 				
 				$query = "UPDATE Student SET firstName = '" . $firstName . "' WHERE id = '" . $_POST['studentID'] . "';";
 			
